@@ -1,0 +1,427 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="DA_CN.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/icon/css/all.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+    <style>
+        .menu ul{
+            list-style: none;
+            text-align: center;
+            background: #E1E8ED;
+            height: 50px;
+        }
+        .top_p{
+        }
+        .menu li{
+            color: rgb(29, 240, 47);
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: -5px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: #1B9CFC;
+            display: block;
+            font-weight: 700;
+        }
+        .menu a:hover{
+            color: #55E6C1;
+            border-radius: 25px;
+        }
+        .site-padding{
+	        padding:70px 0;
+        }
+
+        .btn.btn-read-more {
+          background: #00bcd4 none repeat scroll 0 0;
+          border-radius: 50px;
+          -moz-border-radius:50px;
+          -webkit-border-radius:50px;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 9px 21px;
+        }
+
+        .about-text{
+	        margin-top:70px;
+        }
+        .about-image img{
+            margin-top: 30px;
+        }
+        .card_group{
+            display: flex;        
+            position: relative;
+            width: 50%;
+        }
+        .card{
+            width: 250px;
+            height: 250px;
+            background: red;
+        }
+        /*mauchudao*/
+        .card1{
+            margin: auto;
+        }
+
+        hr{
+            width: 100px;
+            height: 4px;
+            margin: auto;
+            border: 2px;
+            background: #4b7bec;
+         }
+        .title h3{
+            text-align: center;
+            font-size: 2.5em;
+            color: #4b7bec;
+        }
+  /**/  
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          overflow: hidden;
+          width: 0;
+          height: 100%;
+          transition: .5s ease;
+        }
+
+        .card-group:hover .overlay { 
+          width: 100%;
+        }
+
+        .text{
+          white-space: nowrap; 
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          overflow: hidden;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+        }
+
+        .card-group img{
+              opacity: 1;
+              display: block;
+              width: 450px;
+              height: 450px;
+              transition: .5s ease;
+              backface-visibility: hidden;
+        }
+        /*end*/
+        /*footer*/
+        /* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background:#222f3e !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+#footer a {
+    color: black;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+    color: red;
+}
+#footer ul.social li:hover a .fa-facebook {
+	font-size:30px;
+    color: #4b7bec;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color: #ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+.mt-sm-5 h2{
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+.mail_footer{
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    outline: none;
+}
+.mail_footer:hover{
+   border: 1px solid #26de81;
+}
+.btn_footer{
+    border: none;
+    height: 50px;
+    color: white;
+    background-color: #26de81;
+    border-radius: 10px;
+}
+.container-fluid img{
+    height: 80px;
+    width: 150px;
+}
+.header_group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    
+}
+.logo{
+    cursor: pointer;
+    height: 70px;
+    width: 100px;
+}
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+.nav__links li a:hover{
+   color: red;
+}
+.nav_icons{
+    padding: 9px 25px;
+    transition: all 0.3s ease 0s;
+   
+}
+.flex-fill ul li a{
+    font-weight: 600;
+    color: black !important;
+}
+.flex-fill ul li a:hover{
+    background-color: #00a8ff;
+    color: white !important;
+}
+.d-flex a:hover{
+    color: red;
+}
+.nav-link{
+    color: #00A8FF;
+}
+/*footer-icon*/
+.social {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 25px;
+}
+.social a i{
+  color: #fff;
+}
+.social a i:hover{
+    color: #3742fa;
+}
+.social .face i:hover{
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    
+    <%--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:contact@example.com">duluxvn@gmail.com</a>
+        <i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:"> 0868248101</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+            
+        <span class="navbar-text">
+          <p class="top_p">Chào mừng bạn đã đến với dulux VN</p>
+        </span>
+      </div>
+    </nav>--%>
+    
+    <!---menu---->
+        <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="default.aspx">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Dulux</span> <span class="text-primary h4">Color</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="default.aspx">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="mau.aspx">Màu Sắc</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="sanpham.aspx">Sản Phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="tintic.aspx">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="lienhe.aspx">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <% if (Session["allow"] == null)
+                        {%>
+                            <a class="nav-link" href="login.aspx"><i class="fas fa-sign-in-alt"></i> Đăng Nhập</a> 
+                            <% }
+                        else
+                        {%>
+                            <a class="nav-link" href="logout.aspx"><i class="fas fa-sign-out-alt"></i>
+                                (<%Response.Write(Session["Username"].ToString());%>) Đăng xuất</a><%} %>
+                    
+                    
+                   <%-- <a class="nav-link" href="loginad.aspx"><i class="fas fa-user-cog"></i></a>--%>
+                   
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!---slideshow--->
+    
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <!---footer--->
+        <section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <h2>Liên hệ với chúng tôi...</h2>
+					<div class="social">
+									<a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="face"><i class="fab fa-youtube"></i></a>				
+					</div>
+				</div>
+				
+			    </div>	
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Thông Tin</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Liên hệ chúng tôi</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Tìm cửa hàng</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Về chúng tôi</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>MENU</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Trang Chủ</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Tra Cứu Màu</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Sản Phẩm</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Tin Tức</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Liện Hệ</a></li>
+					</ul>
+				</div>
+			    <div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Nhận bản tin từ chúng tôi</h5>
+					    <input type="email" placeholder="Nhập địa chỉ mail" class="mail_footer" />
+                        <button class="btn_footer">Đăng Ký</button>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p class="h6">© Bản Quyền Thuộc.<a class="text-green ml-2" href="#" target="_blank">HQB</a></p>
+				</div>
+				
+			</div>	
+		</div>
+	</section>
+
+
+
+
+    <!---end--->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>   
+</body>
+</html>
