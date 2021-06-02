@@ -20,7 +20,7 @@ namespace DA_CN
         protected void Button1_Click(object sender, EventArgs e)
         {
             string passmahoa = TextBox2.Text;//kn.mahoa(txtpass.Text);
-            SqlDataAdapter da = new SqlDataAdapter("select * from tbl_KhachHang where Username='" + TextBox1.Text + "' and Password='" + passmahoa + "'", kn.con);
+            SqlDataAdapter da = new SqlDataAdapter("select * from tbl_KhachHang where Username ='" + TextBox1.Text + "'  and Password='" + passmahoa + "'", kn.con);
             DataTable tb = new DataTable();
             da.Fill(tb);
             if (tb.Rows.Count > 0)
@@ -30,7 +30,12 @@ namespace DA_CN
                 Session["allow"] = true;  
                     Response.Write("<script>alert('Đăng nhập thành công'); window.location ='default.aspx';</script>");
             }
-            else Response.Write("<script>alert('Username/Password chưa đúng')</script>");
+            
+            else
+            {
+                Response.Write("<script>alert('Username hoặc Password chưa đúng!')</script>");
+            }
+                
         }
     }
    

@@ -1,7 +1,126 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="dangki.aspx.cs" Inherits="DA_CN.dangki" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site1.Master" AutoEventWireup="true" CodeBehind="loginad.aspx.cs" Inherits="DA_CN.loginad" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-  *:focus {
+       <style>
+        .btn-login{
+            margin-left: 2rem;
+            height: 50px;
+            border: none;
+            border-radius: 15px;
+            width: 120px;
+            background: #54a0ff;
+            color: #f1f2f6;
+            font-weight: 700;
+        }
+         .btn-login:hover{
+             background-color: #4cd137;
+         }
+   /*login*/
+           .fadeInDown {
+          -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+        }
+
+        @-webkit-keyframes fadeInDown {
+          0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+
+        @keyframes fadeInDown {
+          0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+h1{
+    color:#60a0ff;
+}
+
+/* OTHERS */
+
+*:focus {
     outline: none;
 } 
 
@@ -9,7 +128,7 @@
   width:30%;
 }
 .dnfs{
-  background-color: #f6f6f6;
+    background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
   padding: 15px 32px;
@@ -34,7 +153,6 @@
   flex-direction: column; 
   justify-content: center;
   width: 100%;
-  margin: auto;
   min-height: 100%;
   padding: 20px;
 }
@@ -143,125 +261,27 @@ input[type=text]:focus {
     background: #1e90ff;
     color: white;
 }
-.main {
-    background: #f1f1f1;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-.form {
-    width: 360px;
-    min-height: 100px;
-    padding: 32px 24px;
-    text-align: center;
-    background: #fff;
-    border-radius: 2px;
-    margin: 24px;
-    align-self: center;
-    box-shadow: 0 2px 5px 0 rgba(51,62,73,.1);
-}
-.form .heading {
-    font-size: 2rem;
-}
-.form .desc {
-    text-align: center;
-    color: #636d77;
-    font-size: 1.6rem;
-    font-weight: lighter;
-    line-height: 2.4rem;
-    margin-top: 16px;
-    font-weight: 300;
-}
-
-.form-group {
-    display: flex;
-    margin-bottom: 16px;
-    flex-direction: column;
-}
-
-.form-label,
-.form-message {
-    text-align: left;
-}
-
-.form-label {
-    font-weight: 700;
-    padding-bottom: 6px;
-    line-height: 1.8rem;
-    font-size: 1.4rem;
-}
-
-.form-control {
-    height: 40px;
-    padding: 8px 12px;
-    border: 1px solid #b3b3b3;
-    border-radius: 3px;
-    outline: none;
-    font-size: 1.4rem;
-}
-
-.form-control:hover {
-    border-color: #1dbfaf;
-}
-
-.form-group.invalid .form-control {
-    border-color: #f33a58;
-}
-
-.form-group.invalid .form-message {
-    color: #f33a58;
-}
-
-.form-message {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    padding: 4px 0 0;
-}
-
-.form-submit {
-    outline: none;
-    background-color: #1dbfaf;
-    margin-top: 12px;
-    padding: 12px 16px;
-    font-weight: 600;
-    color: #fff;
-    border: none;
-    width: 100%;
-    font-size: 14px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.form-submit:hover {
-    background-color: #1ac7b6;
-}
-
-.spacer {
-    margin-top: 36px;
-}
-    </style>
+           </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="wrapper fadeInDown">
             <div id="formContent">  
                 <div class="fadeIn first">
                   <img src="hinh/logo.jpg" id="icon" alt="User Icon" />
-                    <h1>Đăng Ký</h1>
-                      <asp:TextBox ID="TextBox3" placeholder="username" runat="server"></asp:TextBox>
-                      <asp:TextBox ID="TextBox4" runat="server" placeholder="password" TextMode="Password" CssClass="dnfs"></asp:TextBox>
-                      <asp:TextBox ID="txt_nhaplai" runat="server" placeholder="Nhập lại password" TextMode="Password" CssClass="dnfs"></asp:TextBox>
-                      <asp:TextBox ID="TextBox5" runat="server" placeholder="Họ tên"></asp:TextBox>
-                      <asp:TextBox ID="TextBox6" runat="server" placeholder="Địa chỉ"></asp:TextBox> 
-                      <asp:TextBox ID="TextBox7" runat="server" placeholder="Email"></asp:TextBox>
-                        <asp:TextBox ID="TextBox8" runat="server" placeholder="Số điện thoại"></asp:TextBox> 
+                    <h1>Đăng Nhập</h1>
+                    <label for="Username" class="form-label">Tên đăng nhập</label>
+                      <asp:TextBox ID="TextBox1" placeholder="" runat="server" required=""></asp:TextBox>
+                    
+                    <label for="password" class="form-label">Mật khẩu</label>
+                      <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" CssClass="dnfs" required=""></asp:TextBox>
+                      
                     <p>
-                        <asp:Button ID="Button2" runat="server" CssClass="fadeIn  fourth" Text="Đăng Ký" OnClick="Button2_Click" />
+                        <asp:Button ID="Button1" runat="server" CssClass="fadeIn  fourth" Text="Đăng Nhập" OnClick="Button1_Click"  />
                     </p>
                 </div>
                 <div id="formFooter">
-                    <p>Quay về</p><a class="underlineHover" href="login.aspx"> Đăng Nhập</a>
+                  <p>Trở về</p><a class="underlineHover" href="default.aspx">Trang chủ</a>
               </div>
-            </div>      
+            </div> 
           </div> 
-    
 </asp:Content>

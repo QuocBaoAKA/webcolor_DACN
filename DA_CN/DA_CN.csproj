@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CKEditor.NET">
+      <HintPath>C:\Users\Snoopy\Downloads\CKEditor.NET.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -101,15 +104,22 @@
     <Content Include="css\light-bootstrap-dashboard.css" />
     <Content Include="dangki.aspx" />
     <Content Include="defaultad.aspx" />
+    <Content Include="hinh\Myplace.png" />
+    <Content Include="khampha.aspx" />
     <Content Include="Lienhe.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="loginad.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="mau.aspx" />
+    <Content Include="ngoaithat.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="QTSP.aspx" />
     <Content Include="sanpham.aspx" />
+    <Content Include="scripts\reponsive.js" />
+    <Content Include="scripts\show.js" />
     <Content Include="Site1.Master" />
     <Content Include="admin.Master" />
     <Content Include="dbQLDA.dbml">
@@ -117,6 +127,8 @@
       <LastGenOutput>dbQLDA.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="tintuc.aspx" />
+    <Content Include="xuly.asmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -173,6 +185,13 @@
       <DependentUpon>defaultad.aspx</DependentUpon>
     </Compile>
     <Compile Include="ketnoi.cs" />
+    <Compile Include="khampha.aspx.cs">
+      <DependentUpon>khampha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khampha.aspx.designer.cs">
+      <DependentUpon>khampha.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Lienhe.aspx.cs">
       <DependentUpon>Lienhe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -186,6 +205,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginad.aspx.cs">
+      <DependentUpon>loginad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginad.aspx.designer.cs">
+      <DependentUpon>loginad.aspx</DependentUpon>
     </Compile>
     <Compile Include="logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
@@ -201,7 +227,22 @@
     <Compile Include="mau.aspx.designer.cs">
       <DependentUpon>mau.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ngoaithat.aspx.cs">
+      <DependentUpon>ngoaithat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ngoaithat.aspx.designer.cs">
+      <DependentUpon>ngoaithat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QTSP.aspx.cs">
+      <DependentUpon>QTSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QTSP.aspx.designer.cs">
+      <DependentUpon>QTSP.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sanpham.aspx.cs">
       <DependentUpon>sanpham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,10 +257,21 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="tintuc.aspx.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tintuc.aspx.designer.cs">
+      <DependentUpon>tintuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xuly.asmx.cs">
+      <DependentUpon>xuly.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="hinhanh\" />
-    <Folder Include="hinh\" />
+    <Folder Include="scss\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -31,7 +31,11 @@ namespace DA_CN
             {
                 Response.Write("<script>alert('Vui lòng nhập đầy đủ thông tin')</script>");
             }
-            else if (test_user(TextBox3.Text.Trim()) == false)
+            else if (test_user(TextBox7.Text.Trim()) == false)
+            {
+
+            }  
+            else if(test_user1(TextBox3.Text.Trim())== false)  
             {
                 SqlCommand cmd = new SqlCommand("insert into tbl_KhachHang(Username, Password, HoTen, DiaChi, Email, SDT) values(N'" + TextBox3.Text + "',N'" + TextBox4.Text + "', N'" + TextBox5.Text + "', N'" + TextBox6.Text + "', N'" + TextBox7.Text + "', N'" + TextBox8.Text + "')", kn.con);
                 kn.con.Open();
@@ -45,6 +49,18 @@ namespace DA_CN
             }
         }
         public bool test_user(string tdn)
+        {
+            int query = db.tbl_KhachHangs.Where(a => a.Email == tdn).Count();
+            if (query > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool test_user1(string tdn)
         {
             int query = db.tbl_KhachHangs.Where(a => a.Username == tdn).Count();
             if (query > 0)

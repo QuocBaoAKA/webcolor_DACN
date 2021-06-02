@@ -26,6 +26,7 @@
             transition: transform .2s;
             margin-right: 4px;
             margin-bottom: 1rem;
+            outline: none;
         }
         .btn1:hover{
             
@@ -171,7 +172,100 @@
             margin: auto;
             margin-top: 5rem;
         }
+         .color_gruop{
+             display: flex;
+             flex-direction: row;
+         }
+         .color_a1{
+             width: 170px;
+             height: 100px;
+             background: rgb(249, 223, 226);
+             margin-right: 10px;
+             border-radius: 10px;
+         }
+         .color_a2{
+             width: 170px;
+             height: 100px;
+             margin-right: 10px;
+             background: rgb(248, 204, 207);
+             border-radius: 10px;
+         }
+         .color_a3{
+             width: 170px;
+             height: 100px;
+             background: rgb(249, 209, 209);
+             margin-right: 10px;
+             border-radius: 10px;
+         }
+         .color_a4{
+             width: 170px;
+             height: 100px;
+             background: rgb(250, 216, 205);
+             margin-right: 10px;
+             border-radius: 10px;
+         }
+         .color_a5{
+             width: 170px;
+             height: 100px;
+             background: rgb(248, 200, 209);
+             margin-right: 10px;
+             border-radius: 10px;
+         }
+         .color_a6{
+             width: 170px;
+             height: 100px;
+             background: rgb(243, 186, 191);
+             margin-right: 10px;
+             border-radius: 10px;
+         }
+         .color_a7{
+             width: 170px;
+             height: 100px;
+             border-radius: 10px;
+             margin-right: 10px;
+         }
+         /*css cửa sổ nổi*/
+        /*color_product*/
+        .color_pro{
+            display: inline-flex;
+           
+        }
+        .color_pr{
+            width: 350px;
+            height: 350px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            background-color: #fff;
+            margin: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            transition: all .2s ease-in-out;
+        }
+        .color_pr:hover {
+            border-top: 1px solid #2ed573;
+            border-left: 2px solid #2ed573;
+            border-right: 2px solid #2ed573;
+            border-bottom: 1px solid #2ed573;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            transform: scale(1.025);
+            z-index: 2;
+        }
+        .color_pr img{
+            width: 350px;
+            height: 250px;
+        }
+        .color_pr a p{
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 18px;
+            line-height: 24px;
+            color: #363740;
+        }
+        .color_pr  a p:hover{
+            color: #1e90ff;
+        }
+        
     </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div id="header" class="content-block">
@@ -189,13 +283,35 @@
 				</section>
 	</div>
     <!----search---->
-    <div class="card_color_group">
+    <center>
+    <div class="color_pro">
+        <div class="color_pr">
+            <img src="hinh/nt1.jpg" />
+            <a href="ngoaithat.aspx"><p>Bảng Màu Ngoại Thất Jotashield  <i class="fas fa-angle-right"></i></p></a>
+        </div>
+    </div>
+    <div class="color_pro">
+        <div class="color_pr">
+            <img src="hinh/nt2.jpg" />
+            <a href="ngoaithat.aspx"><p>Bộ sưu tập màu sắc 2021  <i class="fas fa-angle-right"></i></p></a>
+        </div>
+    </div>
+    <div class="color_pro">
+        <div class="color_pr">
+            <img src="hinh/nt3.jpg" />
+            <a href="ngoaithat.aspx"><p>Mùa nội thất cao cấp Majestic  <i class="fas fa-angle-right"></i></p></a>
+        </div>
+    </div>
+    </center>
+    <%--<div class="card_color_group">
     <div class="card_color">
             <h1>Bạn cần tìm màu gì</h1>
             <div class="c_color">
-               <button class="btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Red</button>
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-bs-toggle="tooltip" title="Tone màu đỏ">
+               <button class="btn1" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Red</button>
+                </span>
                <button class="btn2" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Xanh lá</button>
-               <button class="btn3">Xanh dương</button>
+               <button class="btn3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Xanh dương</button>
                <button class="btn4">Màu tím</button>
                <button class="btn5">Vàng</button>
                <button class="btn6">Trắng</button>
@@ -203,18 +319,71 @@
             </div>
          </div>   
         </div>
-    <div class="card_color_group">
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        <!---modal--->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Hệ mã màu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                    <div class="color_gruop">
+                        <div class="color_a1">
+                            
+                        </div>
+                           
+                        <div class="color_a2">
+
+                        </div>
+                        <div class="color_a3">
+
+                        </div>
+                        <div class="color_a4">
+
+                        </div>
+                        <div class="color_a5">
+
+                        </div>
+                        <div class="color_a6">
+
+                        </div>
+                        <br />
+                        <br />
+                        <div class="color_a7" style="background-color: rgb(245, 181, 183)">
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(249, 202, 189) ">
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(241, 159, 173)">
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(235, 151, 158)" >
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(241, 162, 163)">
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(245, 180, 168)">
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(230, 119, 137)">
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(223, 117, 124)">
+
+                        </div>
+                        <div class="color_a7" style="background-color: rgb(234, 127, 130)">
+                        </div>
+                    </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>           
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="card_color_group">
-        <div class="collapse" id="collapseExample1">
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
-        </div>
-    </div>
+          </div>
+        </div>--%>
+        <!---cửa sổ nổi--->
+    
 </asp:Content>

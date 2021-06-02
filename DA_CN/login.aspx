@@ -15,40 +15,40 @@
              background-color: #4cd137;
          }
    /*login*/
-   .fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
+           .fadeInDown {
+          -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+        }
 
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
+        @-webkit-keyframes fadeInDown {
+          0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
 
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
+        @keyframes fadeInDown {
+          0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
 
 /* Simple CSS3 Fade-in Animation */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -262,6 +262,7 @@ input[type=text]:focus {
     color: white;
 }
     </style>
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Button trigger modal -->
@@ -271,9 +272,12 @@ input[type=text]:focus {
                 <div class="fadeIn first">
                   <img src="hinh/logo.jpg" id="icon" alt="User Icon" />
                     <h1>Đăng Nhập</h1>
-                      <asp:TextBox ID="TextBox1" placeholder="username" runat="server"></asp:TextBox>
-                      <asp:TextBox ID="TextBox2" runat="server" placeholder="password" TextMode="Password" CssClass="dnfs"></asp:TextBox>
+                    <label for="Username" class="form-label">Tên đăng nhập</label>
+                      <asp:TextBox ID="TextBox1" placeholder="" runat="server" required=""></asp:TextBox>
                     
+                    <label for="password" class="form-label">Mật khẩu</label>
+                      <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" CssClass="dnfs" required=""></asp:TextBox>
+                      
                     <p>
                         <asp:Button ID="Button1" runat="server" CssClass="fadeIn  fourth" Text="Đăng Nhập" OnClick="Button1_Click"  />
                     </p>
@@ -281,8 +285,7 @@ input[type=text]:focus {
                 <div id="formFooter">
                   <p>Bạn chưa có tài khoản</p><a class="underlineHover" href="dangki.aspx">Đăng kí</a>
               </div>
-            </div>
-              
+            </div> 
           </div> 
     <!---modal đăng kí---->
     

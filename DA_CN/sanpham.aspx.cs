@@ -22,7 +22,7 @@ namespace DA_CN
         }
         public void hienthi()
         {
-            SqlDataAdapter da = new SqlDataAdapter("select MaSP, TenSP,HinhAnh, DonGia from tbl_SanPham", kn.con);
+            SqlDataAdapter da = new SqlDataAdapter("select MaSP, TenSP,HinhAnh, DonGia from tbl_SanPham where MaLH ='LH01'", kn.con);
             DataTable tb = new DataTable();
             da.Fill(tb);
             Repeater1.DataSource = tb;

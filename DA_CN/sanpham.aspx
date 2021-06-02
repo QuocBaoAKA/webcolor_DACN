@@ -7,9 +7,10 @@
         }
         .products{
             width: 350px;
-            height: 450px;
-            box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+            height: 480px;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
             margin: 2rem 8px;
+            border-radius: 10px;
         }
         .products:hover{
             transition: 0.2s;
@@ -49,13 +50,14 @@
             
         }
         .btn_pro a{
-            color: white;
-            
+            color: white;   
+        }
+        .btn_pro:hover{
+            background: #22c8e5;
         }
         figure {
 	        width: 350px;
-	        height: 250px;
-           
+	        height: 250px; 
 	        margin: 0;
 	        padding: 0;
 	        background: #fff;
@@ -90,7 +92,7 @@
                          <figure><img src="<%#Eval("HinhAnh") %>" class="img_product" /></figure>
                          <h2><%# Eval("TenSP") %></h2>
                          <p><%# Eval("DonGia", "{0:000,000 VND}")%></p>
-                         <button class="btn_pro"><a href="#">Chi Tiết</a></button>
+                         <button class="btn_pro"><a href="/chitietsp.aspx/?masp=<%# Eval("MaSP") %>">Chi Tiết</a></button>
                 </div>
             </div>
         </ItemTemplate>
