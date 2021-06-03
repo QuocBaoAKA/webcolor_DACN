@@ -9,8 +9,8 @@
             overflow: hidden;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             margin: auto;
-            margin-top: 3rem;
-            margin-bottom: 3rem;       
+            margin-top: 2rem;
+            margin-bottom: 3rem;           
         }
         
         .col-1kp-1, .col-kp-2{
@@ -158,7 +158,8 @@
             
         }
         .row_bg{
-            background: #fafafa;    
+            background: #fafafa; 
+            height: 550px;   
         }
         @media(max-width: 700px){
             .row_kp_1{
@@ -166,12 +167,20 @@
                 width: 80%;
             }
         }
+        .h1_bg{
+            text-align: center;
+            color: #555555;
+            font-family: 'PT Serif', serif;
+            line-height: 24px;
+            margin-top: 25px;
+        }
     </style>
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h1 class="h1_bg">Mẫu nhà nội thất đẹp</h1>
     <section  class="row_bg">
-        <h1>Mẫu nhà nội thất đẹp</h1>
+        
     <div id="row_bg" class="row_kp">
         <div class="col-kp-1">
             <h1>Mẫu Sơn Phòng ngủ<br /> với tông màu hồng đầy cá tính</h1>

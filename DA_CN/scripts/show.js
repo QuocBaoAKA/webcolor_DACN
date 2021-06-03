@@ -33,3 +33,5 @@ btnkp1[3].onclick = function () {
 btnkp1[4].onclick = function () {
     imgbanner1.src = "hinh/x1.jpg";
 }
+
+

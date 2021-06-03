@@ -71,30 +71,117 @@
              line-height: 28px;
              padding-top: 25px;
         }
+        /*img_show*/
+        .main_img{
+	    width: 940px;
+	    margin: auto;
+	    margin-top: 30px;
+	    overflow: hidden;
+        margin-bottom: 2rem;    
+	    /*cach thu hai*/
+	    display: flex;
+	    justify-content: space-between;
+	    flex-wrap: wrap;
+         }
+        .main_img h1{
+            margin: auto;
+            margin-bottom: 1.5rem;
+        }
+/*css cho khoi*/
+    .khoi{
+	    width: 300px;
+	    height: 300px;
+	    padding: 5px;
+	    box-sizing: border-box;
+	    overflow: hidden;
+	    position: relative;
+        margin-bottom: 1rem;
+	
+    }
+    .khoi img{
+	    width: 100%;
+	    height: 100%;
+	    transition: 1s;
+        
+    }
+
+    .khoi:hover img{
+	    transform: scale(1.5);
+	    transition: 1s;
+    }
+    .text_da::after{
+        position: relative;
+        content: '';
+        top: 100%;
+        width: 110px;
+        height: 8px;
+        display: block;
+        margin: 0 auto;
+        background: #55efc4;
+    }
+    .container h2:after{
+        position: relative;
+        content: '';
+        top: 100%;
+        width: 110px;
+        height: 8px;
+        display: block;
+        margin: 0 auto;
+        background: #55efc4;
+    }
+    /*back-top*/
+    /*.back-to-top{
+            background: #00a8ff;
+            position: fixed;
+            bottom: 16px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;font-size: 32px;
+            color: #1f1f1f;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .4s;
+
+        }
+        .back-to-top.active{
+             bottom: 32px;
+             pointer-events: auto;
+             opacity: 1;
+        }*/
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!---carousel--->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="hinh/n2.png" class="d-block w-100" alt="..." />
+      <img src="hinh/n2.png" class="d-block w-100" alt="..." height="450" />
     </div>
     <div class="carousel-item">
-      <img src="hinh/n3.jpg" class="d-block w-100" alt="..." />
+      <img src="hinh/n3.jpg" class="d-block w-100" alt="..." height="450"/>
     </div>
     <div class="carousel-item">
-      <img src="hinh/n4.jpg" class="d-block w-100" alt="..." />
+      <img src="hinh/n4.jpg" class="d-block w-100" alt="..." height="450"/>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
     <!---->
     <section id="about" class="site-padding">
@@ -116,45 +203,35 @@
 				</div>
 			</div>
 		</section>
-    <div id="cont" class="container">
-    <div class="row">
-        <h1 class="text_da">Dự án - Công trình tiêu biểu sử dụng sơn Jotun</h1>    
-        <div class="col-md-4 col-xs-4">
-            <a href="#imageModal4" class="portfolio-link" data-toggle="modal">
-            <img src="hinh/CT1.jpg" class="img-responsive" alt="" />
-            </a>
-        </div>
-        <div class="col-md-4 col-xs-4">
-            <a href="#imageModal5" class="portfolio-link" data-toggle="modal">
-            <img src="hinh/CT2.jpg" class="img-responsive" alt="" />
-            </a>
-        </div>
-        <div class="col-md-4 col-xs-4">
-            <a href="#imageModal6" class="portfolio-link" data-toggle="modal">
-            <img src="hinh/CT3.jpg" class="img-responsive" alt="" />
-            </a>
-        </div>
-        </div>
-    </div>
-    <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-xs-4">
-            <a href="#imageModal4" class="portfolio-link" data-toggle="modal">
-            <img src="hinh/CT4.jpg" class="img-responsive" alt="" />
-            </a>
-        </div>
-        <div class="col-md-4 col-xs-4">
-            <a href="#imageModal5" class="portfolio-link" data-toggle="modal">
-            <img src="hinh/C5.jpg" class="img-responsive" alt="" />
-            </a>
-        </div>
-        <div class="col-md-4 col-xs-4">
-            <a href="#imageModal6" class="portfolio-link" data-toggle="modal">
-            <img src="hinh/CT7.jpg" class="img-responsive" alt="" />
-            </a>
-        </div>
-        </div>
-    </div>
+    <!----img_show---->
+     <div class="main_img">
+         <h1 class="text_da">Dự án - Công trình tiêu biểu sử dụng sơn Jotun</h1>
+		<div class="khoi">
+			<img src="hinh/CT1.jpg" />
+			
+		</div> <!-- end khoi -->
+		<div class="khoi">
+			<img src="hinh/CT2.jpg" />
+			
+		</div> <!-- end khoi -->
+		<div class="khoi">
+			<img src="hinh/CT3.jpg" />
+			
+		</div> <!-- end khoi -->
+		<div class="khoi">
+			<img src="hinh/CT4.jpg" />
+			
+		</div> <!-- end khoi -->
+		<div class="khoi">
+			<img src="hinh/CT5.jpg" />
+			
+		</div> <!-- end khoi -->
+		<div class="khoi">
+			<img src="hinh/CT7.jpg" />
+			
+		</div> <!-- end khoi -->
+	</div>
+     <!-- end main -->
     <!---video--->
         <section id="mindcraft-action" class="mindcraft-action section">
 			<div class="container">
@@ -240,4 +317,5 @@
                </div>
 
         </section>--%>
+    
 </asp:Content>

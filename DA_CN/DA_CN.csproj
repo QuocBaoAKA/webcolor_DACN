@@ -43,7 +43,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CKEditor.NET">
+    <Reference Include="CKEditor.NET, Version=3.6.4.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Snoopy\Downloads\CKEditor.NET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -102,11 +103,14 @@
     <Content Include="css\animate.min.css" />
     <Content Include="css\demo.css" />
     <Content Include="css\light-bootstrap-dashboard.css" />
+    <Content Include="css\stylead.css" />
     <Content Include="dangki.aspx" />
+    <Content Include="defauladmin.aspx" />
     <Content Include="defaultad.aspx" />
     <Content Include="hinh\Myplace.png" />
     <Content Include="khampha.aspx" />
     <Content Include="Lienhe.aspx" />
+    <Content Include="loaihang.aspx" />
     <Content Include="login.aspx" />
     <Content Include="loginad.aspx" />
     <Content Include="logout.aspx" />
@@ -118,6 +122,8 @@
     </Content>
     <Content Include="QTSP.aspx" />
     <Content Include="sanpham.aspx" />
+    <Content Include="scripts\back-top.js" />
+    <Content Include="scripts\index.js" />
     <Content Include="scripts\reponsive.js" />
     <Content Include="scripts\show.js" />
     <Content Include="Site1.Master" />
@@ -129,6 +135,7 @@
     </Content>
     <Content Include="tintuc.aspx" />
     <Content Include="xuly.asmx" />
+    <Content Include="Site2.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,6 +177,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbQLDA.dbml</DependentUpon>
     </Compile>
+    <Compile Include="defauladmin.aspx.cs">
+      <DependentUpon>defauladmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="defauladmin.aspx.designer.cs">
+      <DependentUpon>defauladmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,6 +212,13 @@
     </Compile>
     <Compile Include="Lienhe.aspx.designer.cs">
       <DependentUpon>Lienhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loaihang.aspx.cs">
+      <DependentUpon>loaihang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loaihang.aspx.designer.cs">
+      <DependentUpon>loaihang.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -256,6 +277,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
     <Compile Include="tintuc.aspx.cs">
       <DependentUpon>tintuc.aspx</DependentUpon>

@@ -285,6 +285,9 @@ input[type=text]:focus {
                 <div id="formFooter">
                   <p>Bạn chưa có tài khoản</p><a class="underlineHover" href="dangki.aspx">Đăng kí</a>
               </div>
+                <div id="formFooter1">
+                  <p>Đăng nhập tài khoản</p><a class="underlineHover" href="loginad.aspx">ADMIN</a>
+              </div>
             </div> 
           </div> 
     <!---modal đăng kí---->

@@ -15,6 +15,10 @@ namespace DA_CN
         ketnoi kn = new ketnoi();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["allow"] == null)
+            {
+                Response.Redirect("loginad.aspx");
+            }
             if (!IsPostBack)
             {
                 hienthi();
@@ -36,42 +40,65 @@ namespace DA_CN
                 FileUpload1.PostedFile.SaveAs(path);
                 ImageMap1.ImageUrl = tenhinh;
             }
-            kt = xl.themsp(TextBox1.Text, TextBox2.Text, DropDownList1.SelectedValue, DropDownList2.SelectedValue, tenhinh, ckeditor1.Text, float.Parse(TextBox3.Text));
+            kt = xl.themsp(TextBox1.Text, TextBox2.Text, DropDownList2.SelectedValue, DropDownList1.SelectedValue, tenhinh, ckeditor1.Text, float.Parse(TextBox3.Text));
             if (kt)
             {
                 Response.Write("<script>alert('Thêm sản phẩm thành công')</script>");
                 hienthi();
 
             }
-            else
-            {
-                Response.Write("<script>alert('Thêm sản phẩm thất bại')</script>");
+            //else
+            //{
+            //    Response.Write("<script>alert('Thêm sản phẩm thất bại')</script>");
 
-            }
+            //}
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
-            string a = TextBox1.Text;
-            string b = TextBox2.Text;
-            string c = DropDownList1.SelectedValue;
-            string d = DropDownList2.SelectedValue;
-            string e1 = ckeditor1.Text;
-            string f = int.Parse(TextBox3.Text).ToString();
-            string path = Server.MapPath("./hinhanh/" + FileUpload1.FileName);
-            string tenhinh = "/hinhanh/" + FileUpload1.FileName;
+            bool kt;
+            string path = Server.MapPath("~/hinhanh/" + FileUpload1.FileName);
+            string tenhinh = "~/hinhanh/" + FileUpload1.FileName;
             if (FileUpload1.FileName != "")
             {
                 FileUpload1.PostedFile.SaveAs(path);
                 ImageMap1.ImageUrl = tenhinh;
             }
-            SqlCommand db = new SqlCommand();
-            db.Connection = kn.con;
-            db.CommandText = "update tbl_SanPham set TenSP = N'" + b + "', MaLH = '" + c + "', MaMau = '" + d + "', Hinhanh ='" + tenhinh + "',MoTa = N'" + e1 + "', DonGia = '" + f + "' where MaSP = '" + a + "'";
-            db.CommandType = CommandType.Text;
+            kt = xl.suasp(TextBox1.Text, TextBox2.Text, DropDownList2.Text, DropDownList1.Text, tenhinh, ckeditor1.Text, int.Parse(TextBox3.Text));
+            if (kt)
+            {
+                Response.Write("<script>alert('Sửa sản phẩm thành công')</script>");
+                hienthi();
+            }
+            else
+            {
+                Response.Write("<script>alert('Sửa sản phẩm thất bại')</script>");
+            }
+        }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string a = GridView1.DataKeys[e.RowIndex].Values["MaSP"].ToString();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = kn.con;
+            cmd.CommandText = "delete from tbl_SanPham where MaSP ='" + a + "'";
+            cmd.CommandType = CommandType.Text;
             kn.con.Open();
-            db.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
+            Response.Write("<script>alert('Xóa thành công')</script>");
             kn.con.Close();
-            Response.Write("<script>alert('Sửa sản phẩm thành công')</script>");
+            hienthi();
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            this.TextBox1.Text = row.Cells[0].Text;
+            this.TextBox2.Text = HttpUtility.HtmlDecode((String)(row.Cells[1].Text));
+            this.DropDownList2.SelectedValue = row.Cells[2].Text;
+            this.DropDownList1.SelectedValue = row.Cells[3].Text;
+            this.ckeditor1.Text = HttpUtility.HtmlDecode((String)(row.Cells[5].Text));
+            this.TextBox3.Text = row.Cells[6].Text;
+            
         }
     }
 }

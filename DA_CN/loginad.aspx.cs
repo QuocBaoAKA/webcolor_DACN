@@ -31,7 +31,7 @@ namespace DA_CN
                 Session["MaQuyen"] = tb.Rows[0]["MaQuyen"].ToString();
                 if (Session["MaQuyen"].ToString() == "0")
                 {
-                    Response.Write("<script>alert('Đăng nhập thành công'); window.location ='defaultad.aspx';</script>");
+                    Response.Write("<script>alert('Đăng nhập thành công'); window.location ='defauladmin.aspx';</script>");
                 }
                 else
                 {
