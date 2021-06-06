@@ -153,6 +153,30 @@
              pointer-events: auto;
              opacity: 1;
         }*/
+        
+         .btn-grad {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%)}
+         .btn-grad {
+             width: 200px;
+            margin: 10px;
+            padding: 15px 30px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+         
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -197,7 +221,7 @@
 							<h3>Màu Jotun của Năm 2021</h3>
                             <h2>NÂU QUẢ CÁM</h2>
 							<p>Năm nay, chúng tôi chọn ra Màu Của Năm có tông trung tính. Nâu Quả Cảm là một màu ấm áp,cân bằng, kết nối chúng ta về với thiên nhiên và những điều giản dị. Sắc Nâu còn có tính nâng đỡ, thúc đẩy sự ổn định, phát triển, tiếp thêm cho ta cam đảm để đương đầu với đổi thay.</p>
-							<a href="#" class="btn btn-read-more">Tìm hiểu thêm</a>
+							<a href="#" class="btn-grad">Tìm hiểu thêm</a>
 						</div>
 					</div>
 				</div>
@@ -235,7 +259,7 @@
     <!---video--->
         <section id="mindcraft-action" class="mindcraft-action section">
 			<div class="container">
-				<h2>VIDEO VỀ CHÚNG TÔI</h2>
+				<h2 class="h2_video">VIDEO VỀ CHÚNG TÔI</h2>
 				<div>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/yWL0Z0BIsws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 				</div>

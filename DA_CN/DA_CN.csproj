@@ -124,6 +124,7 @@
     <Content Include="sanpham.aspx" />
     <Content Include="scripts\back-top.js" />
     <Content Include="scripts\index.js" />
+    <Content Include="scripts\load_page.js" />
     <Content Include="scripts\reponsive.js" />
     <Content Include="scripts\show.js" />
     <Content Include="Site1.Master" />

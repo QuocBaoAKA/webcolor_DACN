@@ -40,7 +40,7 @@ namespace DA_CN
                 FileUpload1.PostedFile.SaveAs(path);
                 ImageMap1.ImageUrl = tenhinh;
             }
-            kt = xl.themsp(TextBox1.Text, TextBox2.Text, DropDownList2.SelectedValue, DropDownList1.SelectedValue, tenhinh, ckeditor1.Text, float.Parse(TextBox3.Text));
+            kt = xl.themsp(TextBox1.Text, TextBox2.Text, DropDownList2.SelectedValue, DropDownList1.SelectedValue, tenhinh, TextBox4.Text, float.Parse(TextBox3.Text));
             if (kt)
             {
                 Response.Write("<script>alert('Thêm sản phẩm thành công')</script>");
@@ -63,7 +63,7 @@ namespace DA_CN
                 FileUpload1.PostedFile.SaveAs(path);
                 ImageMap1.ImageUrl = tenhinh;
             }
-            kt = xl.suasp(TextBox1.Text, TextBox2.Text, DropDownList2.Text, DropDownList1.Text, tenhinh, ckeditor1.Text, int.Parse(TextBox3.Text));
+            kt = xl.suasp(TextBox1.Text, TextBox2.Text, DropDownList2.Text, DropDownList1.Text, tenhinh, TextBox4.Text,  int.Parse(TextBox3.Text));
             if (kt)
             {
                 Response.Write("<script>alert('Sửa sản phẩm thành công')</script>");
@@ -96,7 +96,7 @@ namespace DA_CN
             this.TextBox2.Text = HttpUtility.HtmlDecode((String)(row.Cells[1].Text));
             this.DropDownList2.SelectedValue = row.Cells[2].Text;
             this.DropDownList1.SelectedValue = row.Cells[3].Text;
-            this.ckeditor1.Text = HttpUtility.HtmlDecode((String)(row.Cells[5].Text));
+            this.TextBox4.Text = HttpUtility.HtmlDecode((String)(row.Cells[5].Text));
             this.TextBox3.Text = row.Cells[6].Text;
             
         }

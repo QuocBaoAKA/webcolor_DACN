@@ -67,18 +67,18 @@
                         <label for="validationDefault01" class="form-label">Hình sản phẩm</label><br />
                         <asp:FileUpload ID="FileUpload1" runat="server" /><asp:ImageMap ID="ImageMap1" runat="server" Width="150px" Height="150px"></asp:ImageMap><br />
                         <label for="validationDefault01" class="form-label">Mô tả</label><br />
-                        <CKEditor:CKEditorControl runat="server" ID="ckeditor1"  ToolbarLocation="Top"   Height="358px"></CKEditor:CKEditorControl><br />
+                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                         <label for="validationDefault01" class="form-label">Đơn giá</label><br />
                         <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server"></asp:TextBox>
                         <div class="d-flex justify-content-center">
                             <asp:Button ID="Button1" runat="server" CssClass="btn_edit" Text="Thêm" OnClick="Button1_Click" />
                             <asp:Button ID="Button2" runat="server" CssClass="btn_up" Text="Sửa" OnClick="Button2_Click" />
-                        </div>
+                  </div>
         </div>
     </div>
 </div>
     </div>
-    
+    </div>
         <%--<asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
             <HeaderTemplate>
                 <table class="table"> 

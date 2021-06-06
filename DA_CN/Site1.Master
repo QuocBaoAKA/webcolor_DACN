@@ -339,10 +339,53 @@
              pointer-events: auto;
              opacity: 1;
         }
+        #load_page{
+            background: #000 url(hinh/page1.gif) no-repeat center center;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            background-size: 32%;
+
+        }
+        /*dark mode*/
+        .dark{
+            color: red;
+        }
+        .darkmode--activated p, .darkmode--activated li, .darkmode--activated h3, .darkmode--activated h2 {
+          color: #fff;
+        }
+        .darkmode--activated .ftb_ter{
+            background: #30336b !important;
+        }
+        .darkmode--activated .titlepage h2{
+            color: #fff;
+        }
+        .darkmode--activated iframe{
+            background: #ffffff;
+        }
+        .darkmode--activated .h2_video h2{
+            color: #fff;
+        }
+        .button {
+          isolation: isolate;
+        }
+
+        .darkmode--activated .logo {
+          mix-blend-mode: difference;
+        }
+        /*đổi màu nền menu*/
+        #main_nav{
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+        }
     </style>
 </head>
 <body>
-    
+    <div id="load_page">
+
+    </div>
+   
     <%--<nav class="navbar navbar-expand-lg navbar-light bg-light">
       <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:contact@example.com">duluxvn@gmail.com</a>
         <i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:"> 0868248101</a>
@@ -394,6 +437,7 @@
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="#lienhe">Liên Hệ</a>
                         </li>
+                        
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
@@ -467,17 +511,23 @@
             </div>
          </div>
       </footer>
+   
     <!---end--->
     <!---back-to-top--->
     <a href="#" class="back-to-top">
         <i class="fas fa-angle-up"></i>
     </a>
+    <!---chat--->
+    <script src="https://chat.bizfly.vn/script/dip-v2/5d1d447d-9116-4346-8205-928410ab2008?ref=webEmbed_8a0ef6badd52228bb33b0ef15831f4a8" async></script>
+    <!---darkmde---->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <!---bts4--->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <!--end--->
     <script src="scripts/back-top.js"></script>
     <script src="scripts/show.js"></script>
+    <script src="scripts/load_page.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>   
