@@ -11,7 +11,7 @@ namespace DA_CN
 {
     public partial class loaihang : System.Web.UI.Page
     {
-        xuly xl = new xuly();
+        xulyGH xl = new xulyGH();
         ketnoi kn = new ketnoi();
         protected void Page_Load(object sender, EventArgs e)
         {

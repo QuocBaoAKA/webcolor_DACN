@@ -241,11 +241,8 @@
             transition: all .2s ease-in-out;
         }
         .color_pr:hover {
-            border-top: 1px solid #2ed573;
-            border-left: 2px solid #2ed573;
-            border-right: 2px solid #2ed573;
-            border-bottom: 1px solid #2ed573;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
             transform: scale(1.025);
             z-index: 2;
         }

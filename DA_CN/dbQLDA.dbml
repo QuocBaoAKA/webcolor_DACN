@@ -37,13 +37,14 @@
       <Column Name="ID_TK" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayDatHang" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="DiaChiNhanHang" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="tbl_KhachHang_tbl_DonDatHang" Member="tbl_KhachHang" ThisKey="ID_TK" OtherKey="ID_TK" Type="tbl_KhachHang" IsForeignKey="true" />
       <Association Name="tbl_NhanVien_tbl_DonDatHang" Member="tbl_NhanVien" ThisKey="MaNV" OtherKey="MaNV" Type="tbl_NhanVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_KhachHang" Member="tbl_KhachHangs">
     <Type Name="tbl_KhachHang">
-      <Column Name="ID_TK" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_TK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />

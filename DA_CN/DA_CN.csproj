@@ -99,14 +99,29 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ADMIN\app.js" />
+    <Content Include="ADMIN\cssad\app.css" />
+    <Content Include="ADMIN\cssad\app.js" />
+    <Content Include="ADMIN\cssad\grid.css" />
+    <Content Include="ADMIN\hinh\icon.png" />
+    <Content Include="ADMIN\quantrisp\default.aspx" />
+    <Content Include="ADMIN\quantrisp\delete.aspx" />
+    <Content Include="ADMIN\quantrisp\suasp.aspx" />
+    <Content Include="ADMIN\quantrisp\themsp.aspx" />
     <Content Include="chitietsp.aspx" />
+    <Content Include="giohang\default.aspx" />
+    <Content Include="ADMIN\cssad\admin.js" />
+    <Content Include="scripts\kh.js" />
+    <Content Include="Tem_color\color.html" />
+    <Content Include="color_2021.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\demo.css" />
     <Content Include="css\light-bootstrap-dashboard.css" />
-    <Content Include="css\stylead.css" />
+    <Content Include="ADMIN\cssad\stylead.css" />
     <Content Include="dangki.aspx" />
-    <Content Include="defauladmin.aspx" />
+    <Content Include="ADMIN\dash\defauladmin.aspx" />
     <Content Include="defaultad.aspx" />
+    <Content Include="ADMIN\hinh\admin.png" />
     <Content Include="hinh\Myplace.png" />
     <Content Include="khampha.aspx" />
     <Content Include="Lienhe.aspx" />
@@ -123,10 +138,11 @@
     <Content Include="QTSP.aspx" />
     <Content Include="sanpham.aspx" />
     <Content Include="scripts\back-top.js" />
-    <Content Include="scripts\index.js" />
+    <Content Include="ADMIN\cssad\index.js" />
+    <Content Include="scripts\color.js" />
     <Content Include="scripts\load_page.js" />
     <Content Include="scripts\reponsive.js" />
-    <Content Include="scripts\show.js" />
+    <Content Include="ADMIN\cssad\show.js" />
     <Content Include="Site1.Master" />
     <Content Include="admin.Master" />
     <Content Include="dbQLDA.dbml">
@@ -134,9 +150,10 @@
       <LastGenOutput>dbQLDA.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Tem_color\phoimau.aspx" />
     <Content Include="tintuc.aspx" />
     <Content Include="xuly.asmx" />
-    <Content Include="Site2.Master" />
+    <Content Include="ADMIN\admin_master\Site2.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,12 +176,47 @@
     <Compile Include="admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="ADMIN\quantrisp\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\quantrisp\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\quantrisp\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\quantrisp\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\quantrisp\suasp.aspx.cs">
+      <DependentUpon>suasp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\quantrisp\suasp.aspx.designer.cs">
+      <DependentUpon>suasp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\quantrisp\themsp.aspx.cs">
+      <DependentUpon>themsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\quantrisp\themsp.aspx.designer.cs">
+      <DependentUpon>themsp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="chitietsp.aspx.cs">
       <DependentUpon>chitietsp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="chitietsp.aspx.designer.cs">
       <DependentUpon>chitietsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="color_2021.aspx.cs">
+      <DependentUpon>color_2021.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="color_2021.aspx.designer.cs">
+      <DependentUpon>color_2021.aspx</DependentUpon>
     </Compile>
     <Compile Include="dangki.aspx.cs">
       <DependentUpon>dangki.aspx</DependentUpon>
@@ -178,11 +230,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbQLDA.dbml</DependentUpon>
     </Compile>
-    <Compile Include="defauladmin.aspx.cs">
+    <Compile Include="ADMIN\dash\defauladmin.aspx.cs">
       <DependentUpon>defauladmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="defauladmin.aspx.designer.cs">
+    <Compile Include="ADMIN\dash\defauladmin.aspx.designer.cs">
       <DependentUpon>defauladmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
@@ -198,6 +250,13 @@
     </Compile>
     <Compile Include="defaultad.aspx.designer.cs">
       <DependentUpon>defaultad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giohang\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="giohang\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="ketnoi.cs" />
     <Compile Include="khampha.aspx.cs">
@@ -279,12 +338,19 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="Site2.Master.cs">
+    <Compile Include="ADMIN\admin_master\Site2.Master.cs">
       <DependentUpon>Site2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site2.Master.designer.cs">
+    <Compile Include="ADMIN\admin_master\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tem_color\phoimau.aspx.cs">
+      <DependentUpon>phoimau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tem_color\phoimau.aspx.designer.cs">
+      <DependentUpon>phoimau.aspx</DependentUpon>
     </Compile>
     <Compile Include="tintuc.aspx.cs">
       <DependentUpon>tintuc.aspx</DependentUpon>
@@ -299,7 +365,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="hinhanh\" />
+    <Folder Include="ADMIN\hinhanh\" />
     <Folder Include="scss\" />
   </ItemGroup>
   <ItemGroup>

@@ -807,6 +807,8 @@ namespace DA_CN
 		
 		private string _DiaChiNhanHang;
 		
+		private string _SDT;
+		
 		private EntityRef<tbl_KhachHang> _tbl_KhachHang;
 		
 		private EntityRef<tbl_NhanVien> _tbl_NhanVien;
@@ -825,6 +827,8 @@ namespace DA_CN
     partial void OnNgayDatHangChanged();
     partial void OnDiaChiNhanHangChanging(string value);
     partial void OnDiaChiNhanHangChanged();
+    partial void OnSDTChanging(string value);
+    partial void OnSDTChanged();
     #endregion
 		
 		public tbl_DonDatHang()
@@ -938,6 +942,26 @@ namespace DA_CN
 					this._DiaChiNhanHang = value;
 					this.SendPropertyChanged("DiaChiNhanHang");
 					this.OnDiaChiNhanHangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="VarChar(10)")]
+		public string SDT
+		{
+			get
+			{
+				return this._SDT;
+			}
+			set
+			{
+				if ((this._SDT != value))
+				{
+					this.OnSDTChanging(value);
+					this.SendPropertyChanging();
+					this._SDT = value;
+					this.SendPropertyChanged("SDT");
+					this.OnSDTChanged();
 				}
 			}
 		}
@@ -1079,7 +1103,7 @@ namespace DA_CN
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_TK", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_TK", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_TK
 		{
 			get

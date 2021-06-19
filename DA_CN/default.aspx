@@ -107,7 +107,24 @@
 
     .khoi:hover img{
 	    transform: scale(1.5);
-	    transition: 1s;
+	    transition: 1s; 
+    }
+    @media screen and (max-width: 760px){  
+        .khoi{
+            width: 600px;
+            box-sizing: border-box;
+        }
+        .khoi img{
+            width: 80%;     
+        }
+        .video_container .frame_video{
+            width: 460px;
+            height: 350px;
+        }
+        .khoi:hover img{
+            transform: scale(0.8);
+        }
+        
     }
     .text_da::after{
         position: relative;
@@ -174,6 +191,11 @@
             color: #fff;
             text-decoration: none;
           }
+         @media (max-width: 760px){
+             .about-image img{
+                 width: 450px;
+             }
+         }
          
          
         
@@ -229,7 +251,7 @@
 		</section>
     <!----img_show---->
      <div class="main_img">
-         <h1 class="text_da">Dự án - Công trình tiêu biểu sử dụng sơn Jotun</h1>
+         <h1 class="text_da">Dự án - Công trình tiêu biểu sử dụng</h1>
 		<div class="khoi">
 			<img src="hinh/CT1.jpg" />
 			
@@ -260,8 +282,8 @@
         <section id="mindcraft-action" class="mindcraft-action section">
 			<div class="container">
 				<h2 class="h2_video">VIDEO VỀ CHÚNG TÔI</h2>
-				<div>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/yWL0Z0BIsws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+				<div class="video_container">
+					<iframe width="560" height="315" class="frame_video" src="https://www.youtube.com/embed/yWL0Z0BIsws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 				</div>
 			</div>
 		</section>
@@ -279,19 +301,19 @@
                <div class="col-md-4">
                   <div class="best_box">
                      <h4><i class="fas fa-map-marker-alt"></i></h4>
-                     <p>Đường Số 6, Dĩ An, Bình Dương, Việt Nam</p>
+                     <p>126 Nguyễn Thiện Thành, Phường 5, Trà Vinh</p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="best_box">
                      <h4><i class="fas fa-phone-alt"></i></h4>
-                     <p>+842743515515</p>
+                     <p>0868248101</p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="best_box">
                      <h4><i class="fas fa-envelope"></i></h4>
-                     <p>Jotun.vn@gmail.com</p>
+                     <p>House.colorvn@gmail.com</p>
                   </div>
                </div>
                

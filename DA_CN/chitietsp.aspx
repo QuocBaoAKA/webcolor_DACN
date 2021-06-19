@@ -1,55 +1,55 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="chitietsp.aspx.cs" Inherits="DA_CN.chitietsp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
        <style>
-.card {
-    border: none;
-    width: 100%;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-}
-.card_product{
-    font-size: 18px;
-    margin-top: 5rem;
-}
-.pf1{
-    color: #f72626;
-    font-size: 1.5em;
-}
-.product {
-    background-color: #eee;
-}
+        .card {
+            border: none;
+            width: 100%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        }
+        .card_product{
+            font-size: 18px;
+            margin-top: 5rem;
+        }
+        .pf1{
+            color: #f72626;
+            font-size: 1.5em;
+        }
+        .product {
+            background-color: #eee;
+        }
 
-.brand {
-    font-size: 13px
-}
-.about {
-    font-size: 14px
-}
+        .brand {
+            font-size: 13px
+        }
+        .about {
+            font-size: 14px
+        }
 
-.color {
-    margin-bottom: 10px
-}
+        .color {
+            margin-bottom: 10px
+        }
 
-label.radio {
-    cursor: pointer
-}
+        label.radio {
+            cursor: pointer
+        }
 
-label.radio input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    pointer-events: none
-}
+        label.radio input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            pointer-events: none
+        }
 
-label.radio span {
-    padding: 2px 9px;
-    border: 2px solid #ff0000;
-    display: inline-block;
-    color: #ff0000;
-    border-radius: 3px;
-    text-transform: uppercase
-}
+        label.radio span {
+            padding: 2px 9px;
+            border: 2px solid #ff0000;
+            display: inline-block;
+            color: #ff0000;
+            border-radius: 3px;
+            text-transform: uppercase
+        }
 
 label.radio input:checked+span {
     border-color: #ff0000;
@@ -204,16 +204,29 @@ label.radio input:checked+span {
         margin-top: 1rem;
         margin-bottom: 1rem;
         text-align: center;
-        border-radius: 8px;
+       
+    }
+    .card1 img{
+        width: 500px;
+        height: 500px;
+    }
+    .fb_content{
+        width: 80%;
+        margin: auto;
+
     }
     </style>    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=1035397543626875&autoLogAppEvents=1" nonce="QpDWsGnI"></script>
     <asp:Repeater ID="Repeater1" runat="server">
+         
         <ItemTemplate>
+
           <div class="de_pro">
             <div class="card1">
-                 <img src="<%# Eval("sp.HinhAnh") %>" />
+                 <img src="/ADMIN/hinhanh/<%# Eval("sp.HinhAnh") %>" />
                 </div>
                     <div class="col-md-6">
                         <div class="product p-4">
@@ -233,51 +246,25 @@ label.radio input:checked+span {
                                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                                
                             </div>
-                            <div class="cart mt-4 align-items-center"><button type="button" id="btn" value="Show Alert" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Mua hàng</button><i class="fa fa-share-alt text-muted"></i> </div>
-                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                          <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                              <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLongTitle">QBV Helmet</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                  <span aria-hidden="true">&times;</span>
-                                                </button>
-                                              </div>
-                                              <div class="modal-body">
-                                                       <img src="/hinh/anh-xin-loi-dep_095941213.jpg" class="img_sr" height="250" />
-                                                          <div class="hotline-bar">
-                                                             s
-		                                                        <a href="tel:0868248101">
-                    
-			                                                        <span class="text-hotline">0868.242.101</span>
-		                                                        </a>
-	                                                      </div>
-                                                        <p>Website chưa hoàn thiện giỏ hàng, Quý khách hàng mua hàng vui lòng liên hệ với chúng tôi</p>
-                                                  
-                                              </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                               
-                         </div>
-                        </div>
-              </div>
-                        <div class="card_product">
-                            <p class="pf1">Mô tả sản phẩm</p>
-                                <%# Eval("sp.MoTa") %>
-                        </div>
-                   
-                    <div class="zalo-comment-plugin"  data-appid="4255085326657469247" data-size="6"></div>
-                </div>
+                                
+                        
+        
+                </div>      
+                
             </div>
         </div>
     </div>
-</div>
-        </ItemTemplate>
+</div> 
+         
+<div class="card_product">
+           <p class="pf1">Mô tả sản phẩm</p>
+                                <%# Eval("sp.MoTa") %>
+                  </div>
+            <!---hhh---->
+            <div class="fb_content">
+             <div class="fb-comments container" data-href='https://developers.facebook.com/docs/plugins/<%# Eval("sp.MaSP") %>' data-numposts="5" data-width="100%"></div>
+            </div>
+          </ItemTemplate>   
     </asp:Repeater>
-    
+ 
 </asp:Content>

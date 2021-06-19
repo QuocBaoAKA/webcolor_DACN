@@ -261,6 +261,10 @@ input[type=text]:focus {
     background: #1e90ff;
     color: white;
 }
+#login-failed {
+            display: none;
+            color: red;
+        }
            </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -274,7 +278,7 @@ input[type=text]:focus {
                     
                     <label for="password" class="form-label">Mật khẩu</label>
                       <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" CssClass="dnfs" required=""></asp:TextBox>
-                      
+                       <span id="login-failed" class="animated shake text-center">*Sai thông tin đăng nhập</span>
                     <p>
                         <asp:Button ID="Button1" runat="server" CssClass="fadeIn  fourth" Text="Đăng Nhập" OnClick="Button1_Click"  />
                     </p>
@@ -283,5 +287,7 @@ input[type=text]:focus {
                   <p>Trở về</p><a class="underlineHover" href="default.aspx">Trang chủ</a>
               </div>
             </div> 
+        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
           </div> 
+    
 </asp:Content>

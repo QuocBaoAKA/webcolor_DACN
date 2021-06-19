@@ -11,7 +11,7 @@ namespace DA_CN
 {
     public partial class QTSP : System.Web.UI.Page
     {
-        xuly xl = new xuly();
+        xulyGH xl = new xulyGH();
         ketnoi kn = new ketnoi();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,9 +26,13 @@ namespace DA_CN
         }
         public void hienthi()
         {
-            GridView1.DataSource = xl.hienthisp();
-            GridView1.DataBind();
-        }    
+
+            SqlDataAdapter da = new SqlDataAdapter("select * from tbl_SanPham", kn.con);
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            Repeater1.DataSource = tb;
+            Repeater1.DataBind();
+        }   
         
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -77,27 +81,27 @@ namespace DA_CN
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            string a = GridView1.DataKeys[e.RowIndex].Values["MaSP"].ToString();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = kn.con;
-            cmd.CommandText = "delete from tbl_SanPham where MaSP ='" + a + "'";
-            cmd.CommandType = CommandType.Text;
-            kn.con.Open();
-            cmd.ExecuteNonQuery();
-            Response.Write("<script>alert('Xóa thành công')</script>");
-            kn.con.Close();
-            hienthi();
+            //string a = Repeater1.DataKeys[e.RowIndex].Values["MaSP"].ToString();
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.Connection = kn.con;
+            //cmd.CommandText = "delete from tbl_SanPham where MaSP ='" + a + "'";
+            //cmd.CommandType = CommandType.Text;
+            //kn.con.Open();
+            //cmd.ExecuteNonQuery();
+            //Response.Write("<script>alert('Xóa thành công')</script>");
+            //kn.con.Close();
+            //hienthi();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GridViewRow row = GridView1.SelectedRow;
-            this.TextBox1.Text = row.Cells[0].Text;
-            this.TextBox2.Text = HttpUtility.HtmlDecode((String)(row.Cells[1].Text));
-            this.DropDownList2.SelectedValue = row.Cells[2].Text;
-            this.DropDownList1.SelectedValue = row.Cells[3].Text;
-            this.TextBox4.Text = HttpUtility.HtmlDecode((String)(row.Cells[5].Text));
-            this.TextBox3.Text = row.Cells[6].Text;
+            //GridViewRow row = GridView1.SelectedRow;
+            //this.TextBox1.Text = row.Cells[0].Text;
+            //this.TextBox2.Text = HttpUtility.HtmlDecode((String)(row.Cells[1].Text));
+            //this.DropDownList2.SelectedValue = row.Cells[2].Text;
+            //this.DropDownList1.SelectedValue = row.Cells[3].Text;
+            //this.TextBox4.Text = HttpUtility.HtmlDecode((String)(row.Cells[5].Text));
+            //this.TextBox3.Text = row.Cells[6].Text;
             
         }
     }

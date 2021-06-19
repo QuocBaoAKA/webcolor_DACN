@@ -31,15 +31,15 @@ namespace DA_CN
                 Session["MaQuyen"] = tb.Rows[0]["MaQuyen"].ToString();
                 if (Session["MaQuyen"].ToString() == "0")
                 {
-                    Response.Write("<script>alert('Đăng nhập thành công'); window.location ='defauladmin.aspx';</script>");
+                    Response.Write("<script>alert('Đăng nhập thành công'); window.location ='ADMIN/dash/defauladmin.aspx';</script>");
                 }
                 else
-                {
-                    Response.Write("<script>alert('Đăng nhập thất bại'); window.location ='default.aspx';</script>");
+                Literal1.Text = @"<script>
+                                        document.getElementById('login-failed').style.display = 'block';
+                                    </script>";
                 }
             }
-            else Response.Write("<script>alert('Username/Password chưa đúng')</script>");
+            
         }
 
     }
-}

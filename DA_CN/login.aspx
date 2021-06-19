@@ -14,7 +14,7 @@
          .btn-login:hover{
              background-color: #4cd137;
          }
-   /*login*/
+    /*login*/
            .fadeInDown {
           -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
@@ -55,44 +55,41 @@
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-.fadeIn {
-  opacity:0;
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
+        .fadeIn {
+          opacity:0;
+          -webkit-animation:fadeIn ease-in 1;
+          -moz-animation:fadeIn ease-in 1;
+          animation:fadeIn ease-in 1;
+          -webkit-animation-fill-mode:forwards;
+          -moz-animation-fill-mode:forwards;
+          animation-fill-mode:forwards;
+          -webkit-animation-duration:1s;
+          -moz-animation-duration:1s;
+          animation-duration:1s;
+        }
+        .fadeIn.first {
+          -webkit-animation-delay: 0.4s;
+          -moz-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
 
-  -webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
+        .fadeIn.second {
+          -webkit-animation-delay: 0.6s;
+          -moz-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+        }
 
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-}
+        .fadeIn.third {
+          -webkit-animation-delay: 0.8s;
+          -moz-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+        }
 
-.fadeIn.first {
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-
-.fadeIn.second {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-
-.fadeIn.third {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.fadeIn.fourth {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
-}
+        .fadeIn.fourth {
+          -webkit-animation-delay: 1s;
+          -moz-animation-delay: 1s;
+          animation-delay: 1s;
+        }
 
 /* Simple CSS3 Fade-in Animation */
 .underlineHover:after {
@@ -190,7 +187,7 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #3742fa ;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -198,7 +195,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 16px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -211,7 +208,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: #48dbfb;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -276,7 +273,7 @@ input[type=text]:focus {
                       <asp:TextBox ID="TextBox1" placeholder="" runat="server" required=""></asp:TextBox>
                     
                     <label for="password" class="form-label">Mật khẩu</label>
-                      <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" CssClass="dnfs" required=""></asp:TextBox>
+                      <asp:TextBox ID="TextBox2" runat="server" type="password" CssClass="dnfs" required="required"></asp:TextBox>
                       
                     <p>
                         <asp:Button ID="Button1" runat="server" CssClass="fadeIn  fourth" Text="Đăng Nhập" OnClick="Button1_Click"  />

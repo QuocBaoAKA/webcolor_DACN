@@ -79,7 +79,7 @@
 </div>
     </div>
     </div>
-        <%--<asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
             <HeaderTemplate>
                 <table class="table"> 
                      <tr>
@@ -117,13 +117,15 @@
                               <%# Eval("DonGia") %>
                           </td>
                         </tr>
-                         </tbody>   
-                    </table>
+                         
             </ItemTemplate>
+            <FooterTemplate>
+                </tbody>   
+               </table>
+            </FooterTemplate>
         </asp:Repeater>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DACNConnectionString3 %>" SelectCommand="SELECT * FROM [tbl_SanPham]"></asp:SqlDataSource>
-    </div>--%>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" DataKeyNames="MaSP" OnRowDeleting="GridView1_RowDeleting">
+       
+        <%--<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" DataKeyNames="MaSP" OnRowDeleting="GridView1_RowDeleting">
             <Columns>
                 <asp:BoundField DataField="MaSP" HeaderText="Mã sản phẩm" />
                 <asp:BoundField DataField="TenSP" HeaderText="Tên sản phẩm" />
@@ -150,5 +152,5 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
-      
+      --%>
 </asp:Content>

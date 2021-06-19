@@ -13,5 +13,10 @@ namespace DA_CN
         {
 
         }
+        protected void LinkButton1(object sender, EventArgs e)
+        {
+            
+        }
     }
+
 }

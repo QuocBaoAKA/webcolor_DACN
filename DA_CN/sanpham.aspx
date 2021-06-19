@@ -1,20 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="sanpham.aspx.cs" Inherits="DA_CN.sanpham" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        
         .product_item{
             display: inline-flex;
-            flex-direction: row;     
+            flex-direction: row;
+           
         }
         .products{
             width: 350px;
             height: 480px;
-            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+            transition: all 0.5s;
+            background-color: #f5f5f5;
             margin: 2rem 8px;
-            border-radius: 10px;
+            border-radius: 8px;
         }
         .products:hover{
-            transition: 0.2s;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            
+           box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
         }
         .products figure img{
             -webkit-transform: scale(1);
@@ -73,14 +76,18 @@
             text-align: center;
             font-size: 36px;
             line-height: 54px;
-            color: #363740;
+            color: #3742fa;
             font-style: normal;
             font-weight: 400;
             font-family: Playfair Display;
         }
+        .body_group{
+            background: #f2f3f7;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="body_group">
     <div class="product_sp">
         <h1>Các sản phẩm sơn</h1>
     </div>
@@ -89,7 +96,7 @@
         <ItemTemplate>        
            <div class="product_item">
                <div class="products">
-                         <figure><img src="<%#Eval("HinhAnh") %>" class="img_product" /></figure>
+                         <figure><img src="ADMIN/hinhanh/<%#Eval("HinhAnh") %>" class="img_product" /></figure>
                          <h2><%# Eval("TenSP") %></h2>
                          <p><%# Eval("DonGia", "{0:000,000 VND}")%></p>
                          <button class="btn_pro"><a href="/chitietsp.aspx/?masp=<%# Eval("MaSP") %>">Chi Tiết</a></button>
@@ -97,5 +104,7 @@
             </div>
         </ItemTemplate>
     </asp:Repeater>
+    </div>
+
     </div>
 </asp:Content>
